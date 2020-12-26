@@ -45,6 +45,21 @@ command : *${prefix}setprefix*
 desc : substituir prefixo
 usage : *${prefix}setprefix [text|optional]*\nexample : *${prefix}setprefix ?*
 note : This command can only be used by the bot owner\n
+command : *${prefix}kick*
+desc : banir membro do grupo
+usage : *${prefix}kick [@number]*\nexample : *${prefix}kick @number*
+note : This command can only be used by the bot owner\n
+command : *${prefix}add*
+desc : add membro no grupo
+usage : *${prefix}add [number]*\nexample : *${prefix}add number*
+note : This command can only be used by the bot owner\n
+command : *${prefix}bc*
+desc : transmissão
+usage : *${prefix}bc [text]*\nexample : *${prefix}kick text*
+note : This command can only be used by the bot owner\n
+
+AYSLLAN COMEU TEU CU
+
 > *Group Comands* <
 command : *${prefix}linkgroup*
 desc : pegue o link do grupo
