@@ -1,2 +1,2 @@
-# axel-bot-wa
-aaaaa
+# dark-bot
+Apenas uma tradução.
