@@ -12,6 +12,9 @@ usage : reply sticker\n
 command : *${prefix}tsticker* or *${prefix}tstiker*
 desc : converter texto em adesivo
 usage : *${prefix}tsticker text in here*\n
+
+~Aysllan
+
 > *Meme Commands* <
 command : *${prefix}meme*
 desc : imagens aleatórias de meme [english]
@@ -48,14 +51,14 @@ note : This command can only be used by the bot owner\n
 command : *${prefix}kick*
 desc : banir membro do grupo
 usage : *${prefix}kick [@number]*\nexample : *${prefix}kick @number*
-note : This command can only be used by the bot owner\n
+note : Este comando pode ser usado se você for um administrador do grupo\n
 command : *${prefix}add*
 desc : add membro no grupo
-usage : *${prefix}add [number]*\nexample : *${prefix}add number*
-note : This command can only be used by the bot owner\n
+usage : *${prefix}add [number]*\nexample : *${prefix}add 551198129xxxx*
+note : Este comando pode ser usado se você for um administrador do grupo\n
 command : *${prefix}bc*
 desc : transmissão
-usage : *${prefix}bc [text]*\nexample : *${prefix}kick text*
+usage : *${prefix}bc [text]*\nexample : *${prefix}bc text*
 note : This command can only be used by the bot owner\n
 
 AYSLLAN COMEU TEU CU
@@ -64,7 +67,7 @@ AYSLLAN COMEU TEU CU
 command : *${prefix}linkgroup*
 desc : pegue o link do grupo
 usage : just send the command\
-note : can only be used when the bot becomes admin, and the one who sends the command is admin!\n
+note : Este comando pode ser usado se você for um administrador do grupo\n
 command : *${prefix}tagall*
 desc : marca todos os membros do grupo, incluindo administradores também
 usage : apenas envie o comando
