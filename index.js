@@ -340,7 +340,7 @@ async function starts() {
 					break
 				case 'loli':
 					loli.getSFWLoli(async (err, res) => {
-						if (err) return reply('❌ *ERRO* ❌')
+						if (err) return reply('https://imgur.com/${loli.hash}.jpg')
 						buffer = await getBuffer(res.url)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ingat! Citai Lolimu'})
 					})
