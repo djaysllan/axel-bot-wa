@@ -18,9 +18,6 @@ usage : apenas envie o comando\n
 command : *${prefix}gtts*
 desc : converter texto em fala / áudio
 usage : *${prefix}gtts [cc] [text]*\nexemplo : *${prefix}gtts ja On2-chan*\n
-command : *${prefix}loli*
-desc : imagens aleatórias de loli
-usage : apenas envie o comando\n
 command : *${prefix}url2img*
 desc : tirar screenshots da web
 usage : *${prefix}url2img [tipe] [url]*\n
@@ -61,7 +58,9 @@ note : Este comando só pode ser usado pelo proprietário do bot\n
 command : *${prefix}tagall*
 desc : marca todos os membros do grupo, incluindo administradores também
 usage : apenas envie o comando
-note : Este comando pode ser usado se você for um administrador do grupo\n`
+note : Este comando pode ser usado se você for um administrador do grupo\n
+*Ａｙｓｌｌａｎ*
+wa.me/5511981289191`
 }
 
 exports.help = help
