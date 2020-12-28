@@ -5,7 +5,6 @@ const help = (prefix) => {
 command : *${prefix}sticker* or *${prefix}stiker*
 desc : converter imagem / gif / vídeo em adesivo
 usage : responder imagem / gif / vídeo ou enviar imagem / gif / vídeo com legenda\n
-
 command : *${prefix}toimg*
 desc : converter adesivo em imagem
 usage : reply sticker\n
