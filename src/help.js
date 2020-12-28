@@ -6,9 +6,7 @@ wa.me/5511981289191
 command : *${prefix}sticker* or *${prefix}stiker*
 desc : converter imagem / gif / vídeo em adesivo
 usage : responder imagem / gif / vídeo ou enviar imagem / gif / vídeo com legenda\n
-command : *${prefix}sticker nobg* or *${prefix}stiker nobg*
-desc : converter imagem em adesivo removendo o fundo
-usage : responder imagem ou enviar imagem com legenda\n
+
 command : *${prefix}toimg*
 desc : converter adesivo em imagem
 usage : reply sticker\n
