@@ -1,5 +1,8 @@
 const help = (prefix) => {
-	return `> *Sticker Comandos* <
+	return `
+*Ａｙｓｌｌａｎ*
+wa.me/5511981289191
+
 command : *${prefix}sticker* or *${prefix}stiker*
 desc : converter imagem / gif / vídeo em adesivo
 usage : responder imagem / gif / vídeo ou enviar imagem / gif / vídeo com legenda\n
@@ -9,14 +12,9 @@ usage : reply image, or send image with caption\n
 command : *${prefix}toimg*
 desc : converter adesivo em imagem
 usage : reply sticker\n
-
-~Aysllan
-
-> *Meme Comandos* <
 command : *${prefix}meme*
 desc : imagens aleatórias de meme [english]
 usage : just send the command\n
-> *Others Commands* <
 command : *${prefix}gtts*
 desc : converter texto em fala / áudio
 usage : *${prefix}gtts [cc] [text]*\nexemplo : *${prefix}gtts ja On2-chan*\n
@@ -51,10 +49,6 @@ command : *${prefix}bc*
 desc : transmissão
 usage : *${prefix}bc [text]*\nexample : *${prefix}bc text*
 note : This command can only be used by the bot owner\n
-
-AYSLLAN COMEU TEU CU
-
-> *Group Comands* <
 command : *${prefix}tagall*
 desc : marca todos os membros do grupo, incluindo administradores também
 usage : apenas envie o comando
