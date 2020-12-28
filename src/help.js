@@ -1,7 +1,6 @@
 const help = (prefix) => {
 	return `
 *Ａｙｓｌｌａｎ*
-wa.me/5511981289191
 
 command : *${prefix}sticker* or *${prefix}stiker*
 desc : converter imagem / gif / vídeo em adesivo
@@ -58,7 +57,7 @@ desc : marca todos os membros do grupo, incluindo administradores também
 usage : apenas envie o comando
 note : Este comando pode ser usado se você for um administrador do grupo\n
 *Ａｙｓｌｌａｎ*
-wa.me/5511981289191`
+`
 }
 
 exports.help = help
