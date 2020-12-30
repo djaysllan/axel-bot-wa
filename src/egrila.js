@@ -1,4 +1,4 @@
-const help = (prefix) => {
+const egrila = (prefix) => {
 	return `*essa tabela mostra o quão e-girl é a Isabela atualmente*
 
 10%
@@ -16,4 +16,4 @@ const help = (prefix) => {
 `
 }
 
-exports.help = help
+exports.egrila = egrila
