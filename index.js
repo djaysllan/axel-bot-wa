@@ -6,6 +6,7 @@ const {
 } = require('@adiwajshing/baileys')
 const { color, bgcolor } = require('./lib/color')
 const { help } = require('./src/help')
+const { madara } = require('./src/madara')
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
@@ -124,7 +125,7 @@ async function starts() {
 				only: {
 					group: '❌ Este comando só pode ser usado em grupos! ❌',
 					ownerG: '❌ Este comando só pode ser usado pelo grupo proprietário! ❌',
-					ownerB: '❌ Este comando só pode ser usado pelo bot proprietário! ❌',
+					ownerB: '❌ Este comando só pode ser usado pelo proprietário do bot! ❌',
 					admin: '❌ Este comando só pode ser usado por administradores de grupo! ❌',
 					Badmin: '❌ Este comando só pode ser usado quando o bot se torna administrador! ❌'
 				}
@@ -172,6 +173,10 @@ async function starts() {
 				case 'menu':
 					client.sendMessage(from, help(prefix), text)
 					break
+				case 'madara':
+					if (!isOwner) return reply(mess.only.ownerB)
+					client.sendMessage(from, madara(prefix), text)
+					break
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
@@ -202,7 +207,7 @@ async function starts() {
 								fs.unlinkSync(media)
 							})
 					} else {
-						reply('Foto aja mas')
+						reply('Só uma foto mano')
 					}
 					break
 				case 'stiker':
@@ -601,7 +606,7 @@ async function starts() {
 							reply(err)
 						})
 					} else {
-						reply('Foto aja mas')
+						reply('Só uma foto mano')
 					}
 					break
 				default:
