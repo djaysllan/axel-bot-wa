@@ -1,61 +1,117 @@
 const help = (prefix) => {
 	return `
-*Ａｙｓｌｌａｎ*
+┏┳┳┅┅┅┅┅┅┅┅┅┅┅┓
 
-command : *${prefix}sticker* or *${prefix}stiker*
-desc : converter imagem / gif / vídeo em adesivo
-usage : responder imagem / gif / vídeo ou enviar imagem / gif / vídeo com legenda\n
-command : *${prefix}toimg*
-desc : converter adesivo em imagem
-usage : reply sticker\n
-command : *${prefix}meme*
-desc : imagens aleatórias de meme [english]
-usage : apenas envie o comando\n
-command : *${prefix}gtts*
-desc : converter texto em fala / áudio
-usage : *${prefix}gtts [cc] [text]*\nexemplo : *${prefix}gtts ja On2-chan*\n
-command : *${prefix}url2img*
-desc : tirar screenshots da web
-usage : *${prefix}url2img [tipe] [url]*\n
-command : *${prefix}ocr*
-desc : pegue o texto na foto
-usage : responder imagem ou enviar imagem com legenda\n
-command : *${prefix}wait*
-desc : search anime with image [ What Anime Is This/That ]
-usage : responder imagem ou enviar imagem com legendan\n
-command : *${prefix}setprefix*
-desc : substituir prefixo
-usage : *${prefix}setprefix [text|optional]*\nexample : *${prefix}setprefix ?*
-note : Este comando só pode ser usado pelo proprietário do bot\n
-command : *${prefix}clearall*
-desc : Excluir conversas abertas do bot
-usage : apenas envie o comando
-note : Este comando só pode ser usado pelo proprietário do bot\n
-command : *${prefix}kick*
-desc : banir membro do grupo
-usage : *${prefix}kick [@number]*\nexample : *${prefix}kick @number*
-note : Este comando pode ser usado se você for um administrador do grupo\n
-command : *${prefix}add*
-desc : add membro no grupo
-usage : *${prefix}add [number]*\nexample : *${prefix}add 551198129xxxx*
-note : Este comando pode ser usado se você for um administrador do grupo\n
-command : *${prefix}welcome 1*
-desc : Ativa mensagem de boas vindas
-usage : apenas envie o comando
-note : Este comando pode ser usado se você for um administrador do grupo\n
-command : *${prefix}welcome 0*
-desc : Desativa mensagem de boas vindas
-usage : apenas envie o comando
-note : Este comando pode ser usado se você for um administrador do grupo\n
-command : *${prefix}bc*
-desc : transmissão
-usage : *${prefix}bc [text]*\nexample : *${prefix}bc text*
-note : Este comando só pode ser usado pelo proprietário do bot\n
-command : *${prefix}tagall*
-desc : marca todos os membros do grupo, incluindo administradores também
-usage : apenas envie o comando
-note : Este comando pode ser usado se você for um administrador do grupo\n
-*Ａｙｓｌｌａｎ*
+┋┋┋ *Ａｙｓｌｌａｎ*
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┛
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}sticker* ou *${prefix}stiker*
+┋┋┋desc : Converter imagem / gif / vídeo em adesivo
+┋┋┋uso : Responder imagem / gif / vídeo ou enviar imagem / gif / vídeo com legenda\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}toimg*
+┋┋┋desc : Converter adesivo em imagem
+┋┋┋uso : Responda a sticker\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}meme*
+┋┋┋desc : Imagens aleatórias de meme [english]
+┋┋┋uso : Apenas envie o comando\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}gtts*
+┋┋┋desc : Converter texto em fala / áudio
+┋┋┋uso : *${prefix}gtts [cc] [text]*\nexemplo : *${prefix}gtts pt Oi sou um bot*\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}ocr*
+┋┋┋desc : Pegue o texto na foto
+┋┋┋uso : Responder imagem ou enviar imagem com legenda\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}setprefix*
+┋┋┋desc : Substituir prefixo
+┋┋┋uso : *${prefix}setprefix [text|optional]*\nexamplo : *${prefix}setprefix ?*
+┋┋┋nota : Este comando só pode ser usado pelo proprietário do bot\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}clearall*
+┋┋┋desc : Excluir conversas abertas do bot
+┋┋┋uso : Apenas envie o comando
+┋┋┋nota : Este comando só pode ser usado pelo proprietário do bot\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}kick*
+┋┋┋desc : Banir membro do grupo
+┋┋┋uso : *${prefix}kick [@number]*\nexamplo : *${prefix}kick @number*
+┋┋┋nota : Este comando só pode ser usado se você for um administrador do grupo
+┋┋┋nota² : Este comando só pode ser usado se o bot for um administrador do grupo\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}add*
+┋┋┋desc : Adiciona membro ao grupo
+┋┋┋uso : *${prefix}add [number]*\nexample : *${prefix}add 551198129xxxx*
+┋┋┋nota : Este comando só pode ser usado se você for um administrador do grupo
+┋┋┋nota² : Este comando só pode ser usado se o bot for um administrador do grupo\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}welcome 1*
+┋┋┋desc : Ativa mensagem de boas vindas
+┋┋┋uso : Apenas envie o comando
+┋┋┋nota : Este comando só pode ser usado se você for um administrador do grupo\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}welcome 0*
+┋┋┋desc : Desativa mensagem de boas vindas
+┋┋┋uso : Apenas envie o comando
+┋┋┋nota : Este comando só pode ser usado se você for um administrador do grupo\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}bc*
+┋┋┋desc : Transmissão para todos chats abertos do bot
+┋┋┋uso : *${prefix}bc [text]*\nexamplo : *${prefix}bc text*
+┋┋┋nota : Este comando só pode ser usado pelo proprietário do bot\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}tagall*
+┋┋┋desc : Marca todos os membros do grupo, incluindo administradores também
+┋┋┋uso : Apenas envie o comando
+┋┋┋nota : Este comando só pode ser usado se você for um administrador do grupo\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}info*
+┋┋┋desc : Exibe algumas informações do bot
+┋┋┋uso : Apenas envie o comando\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋comando : *${prefix}madara*
+┋┋┋desc : Gera cartões de créditos validos para aprovação
+┋┋┋uso : Apenas envie o comando
+┋┋┋nota : Este comando só pode ser usado pelo proprietário do bot\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┋ *Ａｙｓｌｌａｎ*
+
+┗┻┻┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┛
 `
 }
 
