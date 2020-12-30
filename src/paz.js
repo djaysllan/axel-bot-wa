@@ -21,9 +21,9 @@ const paz = (prefix) => {
 190%
 200%
 
+~Imensurável~ ✅
 
-
-*Voltarei com mais atualizações*
+*Namastê*
 `
 }
 
