@@ -1,2 +1,2 @@
-# dark-bot
-Apenas uma tradução.
+
+Apenas uma edição
