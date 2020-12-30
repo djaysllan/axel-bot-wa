@@ -178,6 +178,9 @@ async function starts() {
 					if (!isOwner) return reply(mess.only.ownerB)
 					client.sendMessage(from, madara(prefix), text)
 					break
+				case 'egrila':
+					client.sendMessage(from, egrila(prefix), text)
+					break
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
