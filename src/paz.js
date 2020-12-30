@@ -1,4 +1,4 @@
-const egrila = (prefix) => {
+const paz = (prefix) => {
 	return `*essa tabela mostra o quão e-girl é a Isabela atualmente*
 10%
 20%
@@ -12,3 +12,6 @@ const egrila = (prefix) => {
 100%
 *Voltarei com mais atualizações*
 `
+}
+
+exports.paz = paz
