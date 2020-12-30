@@ -1,6 +1,5 @@
 const help = (prefix) => {
-	return `
-*essa tabela mostra o quão e-girl é a Isabela atualmente*
+	return `*essa tabela mostra o quão e-girl é a Isabela atualmente*
 
 10%
 20%
