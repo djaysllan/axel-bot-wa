@@ -119,7 +119,14 @@ nota : Este comando só pode ser usado pelo proprietário do bot\n
 comando : *${prefix}egrila*
 desc : Mostra a porcentagem atual do quão e-girl a Isabela é
 uso : Apenas envie o comando
-nota : Este comando será inutil, é apenas uma brincadeira
+nota : Este comando será inutil, é apenas uma brincadeira\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+comando : *${prefix}paz*
+desc : Mostra a porcentagem de quanta paz a Isabela tem
+uso : Apenas envie o comando
+nota : Este comando será inutil, é apenas uma brincadeira\n
 
 ┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 
