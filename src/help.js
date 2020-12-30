@@ -109,6 +109,20 @@ nota : Este comando só pode ser usado pelo proprietário do bot\n
 
 ┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 
+comando : *${prefix}clone*
+desc : Copia a imagem de perfil do membro do grupo marcado
+uso : Envie o comando marcando alguem. Exemplo: *{prefix}clone @number*
+nota : Este comando só pode ser usado pelo proprietário do bot\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+comando : *${prefix}egrila*
+desc : Mostra a porcentagem atual do quão e-girl a Isabela é
+uso : Apenas envie o comando
+nota : Este comando será inutil, é apenas uma brincadeira
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
 ┋┋┋ *Ａｙｓｌｌａｎ*
 
 ┗┻┻┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┛
