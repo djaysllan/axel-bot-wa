@@ -10,6 +10,7 @@ const { madara } = require('./src/madara')
 const { egrila } = require('./src/egrila')
 const { paz } = require('./src/paz')
 const { dubla } = require('./src/dubla')
+const { lzz } = require('./src/lzz')
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
@@ -182,6 +183,12 @@ async function starts() {
 					break
 				case 'egrila':
 					client.sendMessage(from, egrila(prefix), text)
+					break
+				case 'dubla':
+					client.sendMessage(from, dubla(prefix), text)
+					break
+				case 'lzz':
+					client.sendMessage(from, lzz(prefix), text)
 					break
 				case 'paz':
 					client.sendMessage(from, paz(prefix), text)
