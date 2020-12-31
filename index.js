@@ -588,9 +588,9 @@ async function starts() {
 						reply('1 ativar, 0 desabilitar')
 					}
 				case 'clone':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('Tag target yang ingin di clone')
+					if (!isOwner) return reply(mess.only.ownerB)
+					if (!isOwner) return reply(mess.only.ownerB)
+					if (args.length < 1) return reply('clone o alvo')
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Concluído')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
