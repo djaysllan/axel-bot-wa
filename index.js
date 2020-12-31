@@ -11,6 +11,7 @@ const { egrila } = require('./src/egrila')
 const { paz } = require('./src/paz')
 const { dubla } = require('./src/dubla')
 const { lzz } = require('./src/lzz')
+const { dono } = require('./src/dono')
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
@@ -192,6 +193,9 @@ async function starts() {
 					break
 				case 'paz':
 					client.sendMessage(from, paz(prefix), text)
+					break
+				case 'dono':
+					client.sendMessage(from, dono(prefix), text)
 					break
 				case 'info':
 					me = client.user
