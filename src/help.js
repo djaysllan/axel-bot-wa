@@ -130,6 +130,23 @@ nota : Este comando será inutil, é apenas uma brincadeira\n
 
 ┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 
+comando : *${prefix}dubla*
+desc : Mano, o cara dublou as torre gêmeas, ainda não to acreditando
+uso : Apenas envie o comando
+nota : Este comando será inutil, é apenas uma brincadeira\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+comando : *${prefix}lzz*
+desc : Mostra a porcentagem do quão gado é o lzz
+uso : Apenas envie o comando
+nota : Este comando será inutil, é apenas uma brincadeira\n
+
+┋┋┣┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+
+
 ┋┋┋ *Ａｙｓｌｌａｎ*
 
 ┗┻┻┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┛
