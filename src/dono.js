@@ -6,4 +6,4 @@ claramente não foi isso
 `
 }
 
-exports.help = help
+exports.dono = dono
