@@ -368,6 +368,11 @@ async function starts() {
 						if (err) return reply('ERRO')
 						buffer = await getBuffer('https://imgur.com/${loli.hash}.jpg')
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ingat! Citai Lolimu'})
+				case 'loli':
+					loli = await kagApi.loli()
+					buffer = await getBuffer(`https://imgur.com/${loli.hash}.jpg`)
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
+					break
 					})
 					break
 				case 'nsfwloli':
