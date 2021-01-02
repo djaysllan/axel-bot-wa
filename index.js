@@ -368,8 +368,6 @@ async function starts() {
 					buffer = await getBuffer(`https://imgur.com/${loli.hash}.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
 					break
-					})
-					break
 				case 'nsfwloli':
 					if (!isNsfw) return reply('❌ *FALSO* ❌')
 					loli.getNSFWLoli(async (err, res) => {
