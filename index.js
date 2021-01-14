@@ -558,9 +558,9 @@ async function starts() {
 					})
 					break
 				case 'simi':
-					if (args.length < 1) return reply('Textnya mana um?')
+					if (args.length < 1) return reply('Escreve algo?')
 					teks = body.slice(5)
-					anu = await simih(teks) //fetchJson(`https://simsumi.herokuapp.com/api?text=[messages]&lang=[pt]})
+					anu = await simih(teks) //fetchJson(`https://simsumi.herokuapp.com/api?text=[oi]&lang=[pt]})
 					//if (anu.error) return reply('Simi não sabe')
 					reply(anu)
 					break
