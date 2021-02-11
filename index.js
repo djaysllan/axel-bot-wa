@@ -6,12 +6,6 @@ const {
 } = require('@adiwajshing/baileys')
 const { color, bgcolor } = require('./lib/color')
 const { help } = require('./src/help')
-const { madara } = require('./src/madara')
-const { egrila } = require('./src/egrila')
-const { paz } = require('./src/paz')
-const { dubla } = require('./src/dubla')
-const { lzz } = require('./src/lzz')
-const { dono } = require('./src/dono')
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
@@ -41,7 +35,7 @@ function kyun(seconds){
   var seconds = Math.floor(seconds % 60);
 
   //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
-  return `${pad(hours)} Horas ${pad(minutes)} Minutos ${pad(seconds)} Segundos`
+  return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
 }
 
 async function starts() {
@@ -76,7 +70,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Oi @${num.split('@')[0]}\nBem vindo ao grupo *${mdata.subject}*`
+				teks = `Halo @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -130,14 +124,14 @@ async function starts() {
 				only: {
 					group: '❌ Este comando só pode ser usado em grupos! ❌',
 					ownerG: '❌ Este comando só pode ser usado pelo grupo proprietário! ❌',
-					ownerB: '❌ Este comando só pode ser usado pelo proprietário do bot! ❌',
+					ownerB: '❌ Este comando só pode ser usado pelo bot proprietário! ❌',
 					admin: '❌ Este comando só pode ser usado por administradores de grupo! ❌',
 					Badmin: '❌ Este comando só pode ser usado quando o bot se torna administrador! ❌'
 				}
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["5511981289191@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["6285892766102@s.whatsapp.net"] // replace this with your number
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -178,29 +172,10 @@ async function starts() {
 				case 'menu':
 					client.sendMessage(from, help(prefix), text)
 					break
-				case 'madara':
-					if (!isOwner) return reply(mess.only.ownerB)
-					client.sendMessage(from, madara(prefix), text)
-					break
-				case 'egrila':
-					client.sendMessage(from, egrila(prefix), text)
-					break
-				case 'dubla':
-					client.sendMessage(from, dubla(prefix), text)
-					break
-				case 'lzz':
-					client.sendMessage(from, lzz(prefix), text)
-					break
-				case 'paz':
-					client.sendMessage(from, paz(prefix), text)
-					break
-				case 'dono':
-					client.sendMessage(from, dono(prefix), text)
-					break
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*Nome do bot* : ${me.name}\n*Numero do Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Contatos bloqueados* : ${blocked.length}\n*O bot está ativo* : ${kyun(uptime)}`
+					teks = `*Nama bot* : ${me.name}\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
@@ -227,7 +202,7 @@ async function starts() {
 								fs.unlinkSync(media)
 							})
 					} else {
-						reply('Só uma foto mano')
+						reply('Foto aja mas')
 					}
 					break
 				case 'stiker':
@@ -325,23 +300,23 @@ async function starts() {
 							.toFormat('webp')
 							.save(ran)*/
 					} else {
-						reply(`Envie fotos com legendas ${prefix}sticker ou tags de imagem que já foram enviadas`)
+						reply(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim`)
 					}
 					break
 				case 'gtts':
-					if (args.length < 1) return client.sendMessage(from, 'Qual código de idioma em?', text, {quoted: mek})
+					if (args.length < 1) return client.sendMessage(from, 'Kode bahasanya mana om?', text, {quoted: mek})
 					const gtts = require('./lib/gtts')(args[0])
-					if (args.length < 2) return client.sendMessage(from, 'Cadê o texto tio', text, {quoted: mek})
+					if (args.length < 2) return client.sendMessage(from, 'Textnya mana om', text, {quoted: mek})
 					dtt = body.slice(9)
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
 					dtt.length > 600
-					? reply('Erro')
+					? reply('Textnya kebanyakan om')
 					: gtts.save(ranm, dtt, function() {
 						exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 							fs.unlinkSync(ranm)
 							buff = fs.readFileSync(rano)
-							if (err) return reply('falha:(')
+							if (err) return reply('Gagal om:(')
 							client.sendMessage(from, buff, audio, {quoted: mek, ptt:true})
 							fs.unlinkSync(rano)
 						})
@@ -361,12 +336,14 @@ async function starts() {
 					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
 					prefix = args[0]
-					reply(`O prefixo foi alterado com sucesso para : ${prefix}`)
+					reply(`Prefix berhasil di ubah menjadi : ${prefix}`)
 					break
 				case 'loli':
-					loli = await kagApi.loli()
-					buffer = await getBuffer(`https://imgur.com/${loli.hash}.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
+					loli.getSFWLoli(async (err, res) => {
+						if (err) return reply('❌ *ERRO* ❌')
+						buffer = await getBuffer(res.url)
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ingat! Citai Lolimu'})
+					})
 					break
 				case 'nsfwloli':
 					if (!isNsfw) return reply('❌ *FALSO* ❌')
@@ -377,12 +354,12 @@ async function starts() {
 					})
 					break
 				case 'hilih':
-					if (args.length < 1) return reply('Cadê o texto, hum?')
+					if (args.length < 1) return reply('Teksnya mana um?')
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/hilih?teks=${body.slice(7)}`, {method: 'get'})
 					reply(anu.result)
 					break
 				case 'yt2mp3':
-					if (args.length < 1) return reply('Cadê o url, hum?')
+					if (args.length < 1) return reply('Urlnya mana um?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/yta?url=${args[0]}&apiKey=${apiKey}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
@@ -463,7 +440,7 @@ async function starts() {
 					})
 					break
 				case 'tagall':
-					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
@@ -475,30 +452,30 @@ async function starts() {
 					mentions(teks, members_id, true)
 					break
 				case 'clearall':
-					if (!isOwner) return reply('Quem é Você?')
+					if (!isOwner) return reply('Kamu siapa?')
 					anu = await client.chats.all()
 					client.setMaxListeners(25)
 					for (let _ of anu) {
 						client.deleteChat(_.jid)
 					}
-					reply('Chats deletados :)')
+					reply('Sukses delete all chat :)')
 					break
 				case 'bc':
-					if (!isOwner) return reply('Quem é Você?')
+					if (!isOwner) return reply('Kamu siapa?')
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						buff = await client.downloadMediaMessage(encmedia)
 						for (let _ of anu) {
-							client.sendMessage(_.jid, buff, image, {caption: `[ Isto é uma transmissão ]\n\n${body.slice(4)}`})
+							client.sendMessage(_.jid, buff, image, {caption: `[ Ini Broadcast ]\n\n${body.slice(4)}`})
 						}
-						reply('Transmissão de sucesso')
+						reply('Suksess broadcast')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `[ Isto é uma transmissão ]\n\n${body.slice(4)}`)
+							sendMess(_.jid, `[ Ini Broadcast ]\n\n${body.slice(4)}`)
 						}
-						reply('Transmissão de sucesso')
+						reply('Suksess broadcast')
 					}
 					break
 				case 'add':
@@ -535,7 +512,7 @@ async function starts() {
 					break
 				case 'listadmins':
 					if (!isGroup) return reply(mess.only.group)
-					teks = `Lista dos Adm *${groupMetadata.subject}*\nTotal : ${groupAdmins.length}\n\n`
+					teks = `List admin of group *${groupMetadata.subject}*\nTotal : ${groupAdmins.length}\n\n`
 					no = 0
 					for (let admon of groupAdmins) {
 						no += 1
@@ -558,7 +535,7 @@ async function starts() {
 					})
 					break
 				case 'simi':
-					if (args.length < 1) return reply('Escreve algo?')
+					if (args.length < 1) return reply('Textnya mana um?')
 					teks = body.slice(5)
 					anu = await simih(teks) //fetchJson(`https://mhankbarbars.herokuapp.com/api/samisami?text=${teks}`, {method: 'get'})
 					//if (anu.error) return reply('Simi ga tau kak')
@@ -586,29 +563,29 @@ async function starts() {
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('Hmmmm')
 					if (Number(args[0]) === 1) {
-						if (isWelkom) return reply('Já ativo um')
+						if (isWelkom) return reply('Udah aktif um')
 						welkom.push(from)
 						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
-						reply('Ativou com sucesso o recurso de boas-vindas neste grupo ✔️')
+						reply('Sukses mengaktifkan fitur welcome di group ini ✔️')
 					} else if (Number(args[0]) === 0) {
 						welkom.splice(from, 1)
 						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
-						reply('Desativando com sucesso o recurso de boas-vindas neste grupo ✔️')
+						reply('Sukses menonaktifkan fitur welcome di group ini ✔️')
 					} else {
-						reply('1 ativar, 0 desabilitar')
+						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
 					}
 				case 'clone':
-					if (!isOwner) return reply(mess.only.ownerB)
-					if (!isOwner) return reply(mess.only.ownerB)
-					if (args.length < 1) return reply('clone o alvo')
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Concluído')
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (args.length < 1) return reply('Tag target yang ingin di clone')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag cvk')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
 					try {
 						pp = await client.getProfilePicture(id)
 						buffer = await getBuffer(pp)
 						client.updateProfilePicture(botNumber, buffer)
-						mentions(`Foto do perfil atualizada com sucesso usando a foto do perfil @${id.split('@')[0]}`, [jid], true)
+						mentions(`Foto profile Berhasil di perbarui menggunakan foto profile @${id.split('@')[0]}`, [jid], true)
 					} catch (e) {
 						reply('Gagal om')
 					}
@@ -624,7 +601,7 @@ async function starts() {
 							reply(err)
 						})
 					} else {
-						reply('Só uma foto mano')
+						reply('Foto aja mas')
 					}
 					break
 				default:
